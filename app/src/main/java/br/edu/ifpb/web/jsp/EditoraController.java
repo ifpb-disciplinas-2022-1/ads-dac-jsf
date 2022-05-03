@@ -11,7 +11,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+/*
+    app.get('/editoras', () =>{
+        console.log('oi, sou um get');
+    });
+    app.post('/editoras', (res, resp) =>{
+        console.log('oi, sou um post');
+    });
+* */
 // MCV - HTML (View) -> Servlet (Controller) -> Editora (Model)
 @WebServlet(name = "EditoraController", urlPatterns = "/editoras.do")
 public class EditoraController extends HttpServlet {
