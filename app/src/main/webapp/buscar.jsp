@@ -21,7 +21,10 @@
             </label>
             <input type="submit" value="filtrar" />
         </form>
-        
+        <%
+
+
+        %>
         <br/>
         <%@ include file="listar.jsp" %>
 

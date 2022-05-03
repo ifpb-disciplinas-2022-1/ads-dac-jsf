@@ -11,6 +11,7 @@ public class Editora {
     private String localDeOrigem;
     private String nomeFantasia;
 
+    public Editora(){}
     public Editora(String localDeOrigem,String nomeFantasia) {
         this(0, localDeOrigem, nomeFantasia);
     }

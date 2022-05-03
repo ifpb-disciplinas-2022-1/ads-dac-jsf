@@ -6,34 +6,49 @@ import br.edu.ifpb.infra.EditorasEmJDBC;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import java.util.List;
 
 @Named
 @RequestScoped
 public class ControladorDeEditoras {
 
-    private String localDeOrigem;
-    private String nome;
+//    private String localDeOrigem;
+//    private String nome;
+    private Editora editora = new Editora();
 
     private Editoras editoras = new EditorasEmJDBC();
     public String salvar(){
-        Editora editora = new Editora(localDeOrigem, nome);
+//        Editora editora = new Editora(localDeOrigem, nome);
+//        if(editora.valida())
         editoras.nova(editora);
-        return null;
+        return "listar";
     }
 
-    public String getLocalDeOrigem() {
-        return localDeOrigem;
+    public List<Editora> todasAsEditoras(){
+        return this.editoras.todas();
     }
 
-    public void setLocalDeOrigem(String localDeOrigem) {
-        this.localDeOrigem = localDeOrigem;
+    public Editora getEditora() {
+        return editora;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setEditora(Editora editora) {
+        this.editora = editora;
     }
-
-    public String getNome() {
-        return nome;
-    }
+    //
+//    public String getLocalDeOrigem() {
+//        return localDeOrigem;
+//    }
+//
+//    public void setLocalDeOrigem(String localDeOrigem) {
+//        this.localDeOrigem = localDeOrigem;
+//    }
+//
+//    public void setNome(String nome) {
+//        this.nome = nome;
+//    }
+//
+//    public String getNome() {
+//        return nome;
+//    }
 }

@@ -20,12 +20,12 @@
     <div align="center">
         <h:form>
             <h:outputLabel value="Local de Origem:" for="localDeOrigem"/>
-            <h:inputText id="localDeOrigem" value="#{controladorDeEditoras.localDeOrigem}"/><br/>
+            <h:inputText id="localDeOrigem" value="#{controladorDeEditoras.editora.localDeOrigem}" required="true"/><br/>
             <h:outputLabel value="Nome Fantasia:" for="nomeFantasia"/>
-            <h:inputText id="nomeFantasia" value="#{controladorDeEditoras.nome}" /><br/>
+            <h:inputText id="nomeFantasia" value="#{controladorDeEditoras.editora.nomeFantasia}" /><br/>
             <h:commandButton value="+" action="#{controladorDeEditoras.salvar()}"/><br/>
         </h:form>
-        <h:outputText value="#{controladorDeEditoras.localDeOrigem}"/>
+        <h:outputText value="#{controladorDeEditoras.editora.localDeOrigem}"/>
 <!--        <form method="POST" action="editoras.criar.do">-->
 <!--            <label>Local de Origem:-->
 <!--                <input type="text" id="localDeOrigem" name="localDeOrigem"/>-->
