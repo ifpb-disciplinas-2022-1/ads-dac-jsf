@@ -4,6 +4,7 @@ import br.edu.ifpb.domain.Editora;
 import br.edu.ifpb.domain.Editoras;
 import br.edu.ifpb.infra.EditorasEmJDBC;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import java.util.List;
@@ -12,16 +13,31 @@ import java.util.List;
 @RequestScoped
 public class ControladorDeEditoras {
 
-//    private String localDeOrigem;
-//    private String nome;
     private Editora editora = new Editora();
+    private String busca ="";
+    private List<Editora> editorasFiltradas;//  = editoras.todas();
 
     private Editoras editoras = new EditorasEmJDBC();
     public String salvar(){
-//        Editora editora = new Editora(localDeOrigem, nome);
-//        if(editora.valida())
         editoras.nova(editora);
         return "listar";
+    }
+
+    public String filtrar(){
+        if(null==busca || "".equals(busca.trim())){
+            this.editorasFiltradas = editoras.todas(); //lazy
+        }else{
+            this.editorasFiltradas = this.editoras.porLocalDeOrigem(busca);
+        }
+        return null;
+    }
+
+    @PostConstruct
+    public void init(){
+        this.editorasFiltradas = editoras.todas(); //lazy
+    }
+    public List<Editora> getEditorasFiltradas() {
+        return editorasFiltradas;
     }
 
     public List<Editora> todasAsEditoras(){
@@ -35,20 +51,13 @@ public class ControladorDeEditoras {
     public void setEditora(Editora editora) {
         this.editora = editora;
     }
-    //
-//    public String getLocalDeOrigem() {
-//        return localDeOrigem;
-//    }
-//
-//    public void setLocalDeOrigem(String localDeOrigem) {
-//        this.localDeOrigem = localDeOrigem;
-//    }
-//
-//    public void setNome(String nome) {
-//        this.nome = nome;
-//    }
-//
-//    public String getNome() {
-//        return nome;
-//    }
+
+    public String getBusca() {
+        return busca;
+    }
+
+    public void setBusca(String busca) {
+        this.busca = busca;
+    }
+
 }

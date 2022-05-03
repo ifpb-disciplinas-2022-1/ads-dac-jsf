@@ -13,7 +13,7 @@ public class Livro {
     private String titulo;
     private LocalDate dataDeLancamento;
 
-    
+    public Livro(){}
     public Livro(String titulo,LocalDate dataDeLancamento) {
         this(0,titulo,dataDeLancamento);
     }
