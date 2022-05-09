@@ -10,7 +10,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 
 <h:head>
     <title>Title</title>
@@ -20,7 +21,10 @@
     <h2>Listagem de Editoras</h2>
 
     <h:dataTable value="#{controladorDeEditoras.todasAsEditoras()}" var="editora" >
-        <h:column>   #{editora.localDeOrigem}  </h:column>
+        <h:column>  
+            <f:facet name="header">Local de Origem</f:facet>
+             #{editora.localDeOrigem}  
+         </h:column>
         <h:column>   #{editora.nomeFantasia}  </h:column>
     </h:dataTable>
 
