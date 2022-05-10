@@ -8,6 +8,9 @@ Este projeto contém um projeto base para o desenvolvimento dos conteúdos e ass
 
 *[Aula 2 - Conversores e Validadores ](https://github.com/ifpb-disciplinas-2022-1/ads-dac-jsf/commit/39cc7833dbbabc9817677cf0f753128ede4d898b)*
 
+*[Aula 3 - Templates ](https://github.com/ifpb-disciplinas-2022-1/ads-dac-jsf/commit/e98145ed0326627f226ae6d1a8e29418fcb4839f)*
+
+
 ## Executando o projeto
 
 Para executarmos o código precisamos realizar o clone do projeto. Posteriormente, na pasta raiz do projeto, executar os seguintes comandos (ou executar o _script_ `run.sh`):
