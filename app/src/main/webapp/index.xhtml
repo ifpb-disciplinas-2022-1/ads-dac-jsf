@@ -1,21 +1,18 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        <h1>Livraria's Job</h1>
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="WEB-INF/base.xhtml">
+    <ui:define name="centro">
+        <h2>Livraria's Job</h2>
 
 
-        <a href="faces/listar.xhtml">listagem de editoras</a> <br />
-        <a href="faces/criar.xhtml">nova editora</a> <br />
-        <a href="faces/buscar.xhtml">buscar por local</a> <br />
-
-        <a href="">novo livro</a> <br />
+        <a href="faces/editoras/listar.xhtml">listagem de editoras</a> <br />
+        <a href="faces/editoras/criar.xhtml">nova editora</a> <br />
+        <a href="faces/editoras/buscar.xhtml">buscar por local</a> <br />
+        <a href="faces/livros/editar.xhtml">novo livro</a> <br />
         <a href="">listagem de livros</a> <br />
-    </h:body>
-    
-</html>
-
+<!--        https://materializecss.com/templates/starter-template/preview.html-->
+    </ui:define>
+</ui:composition>

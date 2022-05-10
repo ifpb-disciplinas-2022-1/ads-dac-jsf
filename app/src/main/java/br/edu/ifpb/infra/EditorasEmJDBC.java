@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 public class EditorasEmJDBC implements Editoras {
 
     private Connection connection;
+
     public EditorasEmJDBC() {
         try {
             Class.forName("org.postgresql.Driver");
